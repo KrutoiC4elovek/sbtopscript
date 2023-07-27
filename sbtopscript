@@ -2553,8 +2553,6 @@ wait(Random.new():NextNumber(1.1,1.30))
 game:GetService("ReplicatedStorage").lbrick:FireServer()
 game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1;
 wait(Random.new():NextNumber(1.1,1.30))
-game:GetService('VirtualInputManager'):SendKeyEvent(true,'E',false,x)
-wait(Random.new():NextNumber(1.1,1.30))
 end
                     end    
                 })
