@@ -789,6 +789,7 @@ if teleportFunc then
         repeat wait() until localPlr
         game:GetService("RunService").RenderStepped:Connect(function()
             localPlr.Character.HumanoidRootPart.CFrame = CFrame.new(-502.336, 14.228, -179.597)
+game:GetService("GuiService"):ClearError()
         end)
 game:GetService("TeleportService"):TeleportToPlaceInstance(Place, Server, game.Players.LocalPlayer)
     ]])
