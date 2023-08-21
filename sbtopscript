@@ -2542,19 +2542,19 @@ Tab4:AddButton({
 	Name = "Get Trap (Only 20 mins)",
 	Callback = function()
 for i = 1, 200 do
-wait(0.08)
+wait(0.11)
 game:GetService("ReplicatedStorage").lbrick:FireServer()
 game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1;
 wait(Random.new():NextNumber(1.1,1.30))
-wait(0.08)
+wait(0.11)
 game:GetService("ReplicatedStorage").lbrick:FireServer()
 game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1;
 wait(Random.new():NextNumber(1.1,1.30))
-wait(0.08)
+wait(0.11)
 game:GetService("ReplicatedStorage").lbrick:FireServer()
 game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1;
 wait(Random.new():NextNumber(1.1,1.30))
-wait(0.08)
+wait(0.11)
 game:GetService("ReplicatedStorage").lbrick:FireServer()
 game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text = game.Players.LocalPlayer.PlayerGui.BRICKCOUNT.ImageLabel.TextLabel.Text + 1;
 wait(Random.new():NextNumber(1.1,1.30))
