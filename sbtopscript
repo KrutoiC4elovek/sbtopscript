@@ -979,7 +979,7 @@ task.wait()
 end
                     end    
                 })
-
+--[[
 Tab2:AddTextbox({
 	Name = "Make person use rojo spam",
 	Default = "Username",
@@ -993,7 +993,27 @@ end
 	end	  
 })
 Person = game.Players.LocalPlayer.Name
-
+--]]
+Tab2:AddDropdown({
+	Name = "Who",
+	Default = "Me",
+	Options = {"Me", "Others", "All"},
+	Callback = function(Value)
+		if Value == "Me" or Value == "me" or Value == "Username" or Value == "" then
+Person = game.Players.LocalPlayer.Name
+else
+Person = Value
+elseif Value == "All" then
+local plrs = game.Players:GetPlayers()
+Person = plrs.Name
+elseif Value == "Others" then
+local other = game.Players:GetPlayers()
+if other.Name ~= game.Players.LocalPlayer.Name then
+Person = other.Name
+end
+end
+	end    
+})
                 Tab2:AddToggle({
                     Name = "Null Spam (All gloves) (Credits to lloyd#5746)",
                     Default = false,
