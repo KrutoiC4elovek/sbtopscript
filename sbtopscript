@@ -215,7 +215,7 @@ for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
                 end
 			end
 })
-
+--[[
 Tab4:AddButton({
 	Name = "Get Lab Code",
 	Callback = function()
@@ -268,7 +268,7 @@ end)
 end
                     end    
                 })
-
+--]]
                Tab3:AddToggle({
                     Name = "Anti Void",
                     Default = false,
@@ -994,25 +994,19 @@ end
 })
 Person = game.Players.LocalPlayer.Name
 --]]
+local Players = game:GetService("Players")
+local PlayerNames = {}
+for _, player in ipairs(Players:GetPlayers()) do
+    table.insert(PlayerNames, player.Name)
+end
+local Person = PlayerNames[1]
 Tab2:AddDropdown({
-	Name = "Who",
-	Default = "Me",
-	Options = {"Me", "Others", "All"},
-	Callback = function(Value)
-		if Value == "Me" or Value == "me" or Value == "Username" or Value == "" then
-Person = game.Players.LocalPlayer.Name
-else
-Person = Value
-elseif Value == "All" then
-local plrs = game.Players:GetPlayers()
-Person = plrs.Name
-elseif Value == "Others" then
-local other = game.Players:GetPlayers()
-if other.Name ~= game.Players.LocalPlayer.Name then
-Person = other.Name
-end
-end
-	end    
+    Name = "Player",
+    Default = PlayerNames[1],
+    Options = PlayerNames,
+    Callback = function(Value)
+        Person = Value
+    end
 })
                 Tab2:AddToggle({
                     Name = "Null Spam (All gloves) (Credits to lloyd#5746)",
