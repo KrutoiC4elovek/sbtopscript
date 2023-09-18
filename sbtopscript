@@ -979,7 +979,6 @@ task.wait()
 end
                     end    
                 })
---[[
 Tab2:AddTextbox({
 	Name = "Make person use rojo spam",
 	Default = "Username",
@@ -992,22 +991,22 @@ Person = Value
 end
 	end	  
 })
-Person = game.Players.LocalPlayer.Name
---]]
+--[[
+local Person = game.Players.LocalPlayer.Name
 local Players = game:GetService("Players")
-local PlayerNames = {}
+local Igroki = {} -- Замените PlayerNames на Igroki
 for _, player in ipairs(Players:GetPlayers()) do
-    table.insert(PlayerNames, player.Name)
+    table.insert(Igroki, player.Name)
 end
-local Person = PlayerNames[1]
 Tab2:AddDropdown({
     Name = "Player",
-    Default = PlayerNames[1],
-    Options = PlayerNames,
+    Default = Igroki[1],
+    Options = Igroki,
     Callback = function(Value)
         Person = Value
     end
 })
+--]]
                 Tab2:AddToggle({
                     Name = "Null Spam (All gloves) (Credits to lloyd#5746)",
                     Default = false,
